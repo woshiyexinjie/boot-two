@@ -29,5 +29,6 @@
 		<module>exception-handler</module>
 		<module>state-machine</module>
 		<module>guice-use</module>
+		<module>restful-api</module>
 	</modules>
 </project>
