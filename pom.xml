@@ -31,5 +31,7 @@
 		<module>guice-use</module>
 		<module>restful-api</module>
 		<module>sb-log4j</module>
+		<module>cloud-alibaba</module>
+		<module>rabbitmq</module>
 	</modules>
 </project>
