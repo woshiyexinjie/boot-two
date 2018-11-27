@@ -33,5 +33,6 @@
 		<module>sb-log4j</module>
 		<module>cloud-alibaba</module>
 		<module>rabbitmq</module>
+		<module>mail</module>
 	</modules>
 </project>
