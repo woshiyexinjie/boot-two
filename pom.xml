@@ -34,5 +34,6 @@
 		<module>cloud-alibaba</module>
 		<module>rabbitmq</module>
 		<module>mail</module>
+		<module>redis-cache</module>
 	</modules>
 </project>
