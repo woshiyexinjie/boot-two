@@ -35,5 +35,6 @@
 		<module>rabbitmq</module>
 		<module>mail</module>
 		<module>redis-cache</module>
+		<module>mongodb</module>		
 	</modules>
 </project>
