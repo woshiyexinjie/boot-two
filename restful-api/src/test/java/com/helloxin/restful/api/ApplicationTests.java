@@ -25,7 +25,6 @@ public class ApplicationTests {
 	@Before
 	public void setUp() throws Exception {
 		mvc = MockMvcBuilders.standaloneSetup(
-				new UserController(),
 				new UserController()).build();
 	}
 
@@ -34,7 +33,7 @@ public class ApplicationTests {
        
 		RequestBuilder request = null;
 
-		request = get("/users/");
+		request = get("/myusers");
 		mvc.perform(request)
 				.andExpect(status().isOk());		
 
