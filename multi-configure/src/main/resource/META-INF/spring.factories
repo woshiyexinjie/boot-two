@@ -1,0 +1,6 @@
+org.springframework.context.ApplicationListener=com.helloxin.multi.configure.ApplicationEnvironmentPreparedEventListener,\
+  com.helloxin.multi.configure.ApplicationFailedEventListener,\
+  com.helloxin.multi.configure.ApplicationPreparedEventListener,\
+  com.helloxin.multi.configure.ApplicationReadyEventListener,\
+  com.helloxin.multi.configure.ApplicationStartedEventListener,\
+  com.helloxin.multi.configure.ApplicationStartingEventListener

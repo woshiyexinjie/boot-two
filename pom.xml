@@ -37,5 +37,7 @@
 		<module>redis-cache</module>
 		<module>mongodb</module>
 		<module>mybatis</module>
+		<module>genaral-module</module>
+		<module>multi-configure</module>
 	</modules>
 </project>
