@@ -15,9 +15,7 @@ public class SystemProperties {
 
 	public void setValue(String value) {
 		this.value = value;
-	}
-	
-	
+	}	
 	
 	
 }

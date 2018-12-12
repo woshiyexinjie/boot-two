@@ -24,6 +24,16 @@
 		<java.version>1.8</java.version>
 	</properties>
 	
+	<dependencies>
+	      
+	    <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.21</version>
+		</dependency>
+	   
+	</dependencies>
+	
 	<modules>
 		<module>async</module>
 		<module>exception-handler</module>
@@ -39,5 +49,7 @@
 		<module>mybatis</module>
 		<module>genaral-module</module>
 		<module>multi-configure</module>
+		<module>thymeleaf</module>
+		
 	</modules>
 </project>
