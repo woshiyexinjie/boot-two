@@ -58,5 +58,6 @@
 		<module>thymeleaf</module>
 		<module>webflux</module>
 		<module>reactive-eshop</module>
+		<module>es_search</module>
 	</modules>
 </project>
