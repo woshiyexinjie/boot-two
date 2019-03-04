@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -27,6 +29,13 @@ public class TestController {
     public String hello() {
         log.info(" title = " + title);
         return "hello " + title;
+    }
+	
+	@GetMapping("/limit")
+	@SentinelResource("resource")
+    public String limit() {
+        log.info(" limit " );
+        return "hello world";
     }
 	
 	@Autowired
