@@ -20,9 +20,14 @@
 10.restful-api  
 11.sb.log4j  
 12.thymeleaf  
-13.webflux  
+13.webflux 
+14.multi-confihure
+15.mybatis
+16.rabbitmq
+  &ensp;[RabbitMQ入门之spring-boot-starter-amqp](https://my.oschina.net/u/2277632/blog/1563395)
   
   
-  [spring retry 小试](https://my.oschina.net/u/2277632/blog/1858191)  
-  [spring-boot-maven-plugin插件](https://my.oschina.net/u/2277632/blog/2967065)    
-  [spring boot的异常记录（Java SE 9不包含javaEE的Jar包 ）](https://my.oschina.net/u/2277632/blog/1922027)  
+  [spring retry 小试](https://my.oschina.net/u/2277632/blog/1858191)    
+  [spring-boot-maven-plugin插件](https://my.oschina.net/u/2277632/blog/2967065)      
+  [spring boot的异常记录（Java SE 9不包含javaEE的Jar包 ）](https://my.oschina.net/u/2277632/blog/1922027)   
+  [maven-jetty-plugin学习](https://my.oschina.net/u/2277632/blog/1557550)  
