@@ -17,8 +17,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@EnableDiscoveryClient
-@RefreshScope
+//@EnableDiscoveryClient
+//@RefreshScope
 public class TestController {
 	
 	@Value("${topgear.group:}")
