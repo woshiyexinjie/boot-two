@@ -61,5 +61,6 @@
 		<module>es_search</module>
 		<module>dubbo-provider</module>
 		<module>dubbo-consumer</module>
+		<module>grpc-feel</module>
 	</modules>
 </project>
