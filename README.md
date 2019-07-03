@@ -25,6 +25,8 @@
 15.mybatis
 16.rabbitmq
   &ensp;[RabbitMQ入门之spring-boot-starter-amqp](https://my.oschina.net/u/2277632/blog/1563395)
+17.boot-docker    
+   &ensp;[SpringBoot使用docker部署简单入门](https://my.oschina.net/u/2277632/blog/3069164)   
   
   
   [spring retry 小试](https://my.oschina.net/u/2277632/blog/1858191)    
