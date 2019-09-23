@@ -63,5 +63,6 @@
 		<module>dubbo-consumer</module>
 		<module>grpc-feel</module>
 		<module>boot-docker</module>
+		<module>kudu-xin</module>
 	</modules>
 </project>
