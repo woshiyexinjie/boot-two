@@ -1,9 +1,7 @@
 package com.helloxin.restful.api;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,10 +12,14 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MockServletContext.class)
 @WebAppConfiguration
+@Ignore
 public class ApplicationTests {
 
 	private MockMvc mvc;
@@ -30,12 +32,12 @@ public class ApplicationTests {
 
 	@Test
 	public void testUserController() throws Exception {
-       
+
 		RequestBuilder request = null;
 
 		request = get("/myusers");
 		mvc.perform(request)
-				.andExpect(status().isOk());		
+				.andExpect(status().isOk());
 
 	}
 

@@ -62,7 +62,8 @@
 		<module>grpc-feel</module>
 		<module>boot-docker</module>
 		<module>kudu-xin</module>
-    <module>spring-security</module>
-    <module>spring-batch</module>
-	</modules>
+		<module>spring-security</module>
+		<module>spring-batch</module>
+		<module>resttemplate-gateway</module>
+    </modules>
 </project>

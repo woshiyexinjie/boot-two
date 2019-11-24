@@ -1,6 +1,7 @@
 package com.helloxin.reactive.eshop;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = MOCK)
 @AutoConfigureWebTestClient
- 
+@Ignore
 public class ApplicationTest {
 	@Autowired 
 	WebTestClient client;

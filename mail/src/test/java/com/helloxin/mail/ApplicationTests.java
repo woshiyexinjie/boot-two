@@ -1,13 +1,7 @@
 package com.helloxin.mail;
 
-import java.io.File;
-import java.util.Map;
-
-import javax.mail.internet.MimeMessage;
-
-import org.apache.commons.collections.map.HashedMap;
-import org.apache.commons.digester.annotations.FromAnnotationRuleProviderFactory;
 import org.apache.velocity.app.VelocityEngine;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +12,13 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.mail.internet.MimeMessage;
+import java.io.File;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
+@Ignore
 public class ApplicationTests {
 
 	@Autowired

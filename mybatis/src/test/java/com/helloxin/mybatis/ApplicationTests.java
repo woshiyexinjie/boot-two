@@ -1,6 +1,8 @@
 package com.helloxin.mybatis;
 
-import org.junit.Assert;
+import com.helloxin.mybaits.dao.vo.User;
+import com.helloxin.mybatis.dao.UserMapper;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -8,16 +10,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Commit;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.helloxin.mybaits.dao.vo.User;
-import com.helloxin.mybatis.dao.UserMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
 @Transactional
+@Ignore
 public class ApplicationTests {
 	
 	
