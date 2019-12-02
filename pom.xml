@@ -65,5 +65,6 @@
 		<module>spring-security</module>
 		<module>spring-batch</module>
 		<module>resttemplate-gateway</module>
-    </modules>
+		<module>shiro-springmvc</module>
+	</modules>
 </project>
