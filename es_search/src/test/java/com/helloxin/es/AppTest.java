@@ -1,7 +1,5 @@
 package com.helloxin.es;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.helloxin.es.document.GoodsInfo;
 import com.helloxin.es.document.ProductDocument;
 import com.helloxin.es.document.ProductDocumentBuilder;
@@ -52,7 +50,7 @@ public class AppTest {
 		GoodsInfo goodsInfo = new GoodsInfo("羽绒服","保暖靠谱",new Date());
 		ProductDocument productDocument = ProductDocument.builder().id(System.currentTimeMillis() + ((int)Math.random()*100+""))
 				.productName("优衣库 无缝羽绒服").productDesc("优衣库 无缝羽绒服抵挡零下20度的寒冷稳稳的")
-				.createTime(new Date()).updateTime(new Date()).goods(JSONObject.parseObject(JSON.toJSONString(goodsInfo))).build();
+				.createTime(new Date()).updateTime(new Date()).goods(goodsInfo).build();
 		esSearchService.save(productDocument);
 	}
 

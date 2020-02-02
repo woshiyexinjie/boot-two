@@ -81,7 +81,7 @@ public class SearchTest {
     @Test
     public void multiQueryJson() {
         Pageable pageable = PageRequest.of(0, 10);
-        List<ProductDocument> list = esSearchService.multiQueryJson("羽绒服", 1580563186394L, 1580568184900L, pageable);
+        List<ProductDocument> list = esSearchService.multiQueryJson("羽绒服", 1580563186394L, 1580621045933L, pageable);
         list.stream().forEach(x -> System.out.println(x));
     }
 }
