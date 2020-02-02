@@ -1,5 +1,12 @@
 package com.helloxin.es;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.helloxin.es.document.GoodsInfo;
+import com.helloxin.es.document.ProductDocument;
+import com.helloxin.es.document.ProductDocumentBuilder;
+import com.helloxin.es.service.EsSearchService;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,13 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.helloxin.es.document.ProductDocument;
-import com.helloxin.es.document.ProductDocumentBuilder;
-import com.helloxin.es.service.EsSearchService;
-
 import java.util.Date;
-
-import org.junit.Test;
 
 /**
  * Unit test for simple App.
@@ -44,5 +45,24 @@ public class AppTest {
 
 		esSearchService.save(productDocument, productDocument1, productDocument2);
 
+	}
+
+	@Test
+	public void saveSimple() {
+		GoodsInfo goodsInfo = new GoodsInfo("羽绒服","保暖靠谱",new Date());
+		ProductDocument productDocument = ProductDocument.builder().id(System.currentTimeMillis() + ((int)Math.random()*100+""))
+				.productName("优衣库 无缝羽绒服").productDesc("优衣库 无缝羽绒服抵挡零下20度的寒冷稳稳的")
+				.createTime(new Date()).updateTime(new Date()).goods(JSONObject.parseObject(JSON.toJSONString(goodsInfo))).build();
+		esSearchService.save(productDocument);
+	}
+
+	@Test
+	public void deleteDocument(){
+		esSearchService.deleteById("158056306423452.72357104462638");
+	}
+
+	@Test
+	public void deleteAllDocument(){
+		esSearchService.deleteAll();
 	}
 }

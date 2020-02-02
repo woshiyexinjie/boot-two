@@ -1,13 +1,18 @@
 package com.helloxin.es.document;
 
+import com.alibaba.fastjson.JSONObject;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.Mapping;
 
 import java.io.Serializable;
 import java.util.Date;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Document(indexName = "orders", type = "product")
 //@Mapping(mappingPath = "productIndex.json") // 解决IK分词不能使用问题
 public class ProductDocument implements Serializable {
@@ -22,6 +27,16 @@ public class ProductDocument implements Serializable {
     private Date createTime;
 
     private Date updateTime;
+
+    private JSONObject goods;
+
+    public JSONObject getGoods() {
+        return goods;
+    }
+
+    public void setGoods(JSONObject goods) {
+        this.goods = goods;
+    }
 
     public String getId() {
         return id;
@@ -61,5 +76,17 @@ public class ProductDocument implements Serializable {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductDocument{" +
+                "id='" + id + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productDesc='" + productDesc + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", goods=" + goods +
+                '}';
     }
 }
