@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="wizardTables" targetRuntime="MyBatis3">
+        <!-- Plugin list -->
+        <!-- Select limit 1 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.SelectOneByExamplePlugin"/>
+        <!-- MySQL分页插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.LimitPlugin">
+            <!-- 通过配置startPage影响Example中的page方法开始分页的页码，默认分页从0开始 -->
+            <property name="startPage" value="0"/>
+        </plugin>
+        <!-- 数据Model链式构建插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin"/>
+        <!-- 数据Model属性对应Column获取插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ModelColumnPlugin"/>
+        <!-- Example Criteria 增强插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ExampleEnhancedPlugin">
+            <!-- 是否支持已经过时的andIf方法（推荐使用when代替），默认支持 -->
+            <property name="enableAndIf" value="true"/>
+        </plugin>
+
+        <!-- 批量插入插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.BatchInsertPlugin">
+            <!--
+            开启后可以实现官方插件根据属性是否为空决定是否插入该字段功能
+            ！需开启allowMultiQueries=true多条sql提交操作，所以不建议使用！插件默认不开启
+            -->
+            <property name="allowMultiQueries" value="false"/>
+        </plugin>
+        <!-- 逻辑删除插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.LogicalDeletePlugin">
+            <!-- 这里配置的是全局逻辑删除列和逻辑删除值，当然在table中配置的值会覆盖该全局配置 -->
+            <!-- 逻辑删除列类型只能为数字、字符串或者布尔类型 -->
+            <property name="logicalDeleteColumn" value="del_flag"/>
+            <!-- 逻辑删除-已删除值 -->
+            <property name="logicalDeleteValue" value="1"/>
+            <!-- 逻辑删除-未删除值 -->
+            <property name="logicalUnDeleteValue" value="0"/>
+            <!-- 是否生成逻辑删除常量(只有开启时 logicalDeleteConstName、logicalUnDeleteConstName 才生效) -->
+            <property name="enableLogicalDeleteConst" value="true"/>
+            <!-- 逻辑删除常量名称，不配置默认为 IS_DELETED -->
+            <property name="logicalDeleteConstName" value="IS_DELETED"/>
+            <!-- 逻辑删除常量（未删除）名称，不配置默认为 NOT_DELETED -->
+            <property name="logicalUnDeleteConstName" value="NOT_DELETED"/>
+        </plugin>
+        <!-- 存在即更新插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.UpsertPlugin">
+            <!--
+            支持upsertByExample，upsertByExampleSelective操作
+            ！需开启allowMultiQueries=true多条sql提交操作，所以不建议使用！插件默认不开启
+            -->
+            <property name="allowMultiQueries" value="false"/>
+            <!--
+            开启批量功能，支持batchUpsert,batchUpsertWithBLOBs,batchUpserSelective
+            ！这几个方法中无法支持IncrementsPlugin的方法！插件默认不开启
+            -->
+            <property name="allowBatchUpsert" value="fasle"/>
+        </plugin>
+        <!-- Selective选择插入更新增强插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.SelectiveEnhancedPlugin"/>
+        <!-- 查询结果选择性返回插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.SelectSelectivePlugin"/>
+        <!-- 乐观锁插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.OptimisticLockerPlugin">
+            <!-- 是否启用自定义nextVersion，默认不启用(插件会默认使用sql的 set column = column + 1) -->
+            <property name="customizedNextVersion" value="false"/>
+        </plugin>
+        <!-- 状态枚举生成插件 -->
+        <!-- REMARKS_PATTERN = ".*\\s*\\[\\s*(\\w+\\s*\\(\\s*[\\u4e00-\\u9fa5_-a-zA-Z0-9]+\\s*\\)\\s*:\\s*[\\u4e00-\\u9fa5_-a-zA-Z0-9]+\\s*\\,?\\s*)+\\s*\\]\\s*.*"; -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.EnumTypeStatusPlugin">
+            <!-- 是否开启自动扫描根据约定注释格式生成枚举，默认true -->
+            <property name="autoScan" value="true"/>
+            <!-- autoScan为false,这里可以定义全局需要检查生成枚举类的列名 -->
+            <property name="enumColumns" value="type, status"/>
+        </plugin>
+        <!-- 增量插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.IncrementPlugin"/>
+        <!-- Mapper注解插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.MapperAnnotationPlugin">
+            <!-- @Mapper 默认开启 -->
+            <property name="@Mapper" value="true"/>
+            <!-- @Repository 默认关闭，开启后解决IDEA工具@Autowired报错 -->
+            <property name="@Repository" value="true"/>
+        </plugin>
+
+        <!-- Example 目标包修改插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.ExampleTargetPlugin">
+            <!-- 修改Example类生成到目标包下 -->
+            <property name="targetPackage" value="com.yitutech.dao.example"/>
+        </plugin>
+
+        <!-- 表重命名配置插件 -->
+        <plugin type="com.itfsw.mybatis.generator.plugins.TableRenameConfigurationPlugin">
+            <!-- Tb -> TbEntity -->
+            <property name="modelSuffix" value="DO"/>
+        </plugin>
+
+        <!--local -->
+<!--        <jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+<!--                        connectionURL="jdbc:mysql://localhost:3306/test?useSSL=false" userId="root"-->
+<!--                        password="souche2015">-->
+<!--            <property name="nullCatalogMeansCurrent" value="true"/>-->
+<!--        </jdbcConnection>-->
+
+
+<!--        <javaModelGenerator targetPackage="com.helloxin.model.local" targetProject="src/main/java">-->
+<!--            <property name="enableSubPackages" value="true"/>-->
+<!--            <property name="trimStrings" value="true"/>-->
+<!--        </javaModelGenerator>-->
+
+<!--        &lt;!&ndash; Generates xml &ndash;&gt;-->
+<!--        <sqlMapGenerator targetPackage="local" targetProject="src/main/resources">-->
+<!--            <property name="enableSubPackages" value="true"/>-->
+<!--        </sqlMapGenerator>-->
+
+<!--        &lt;!&ndash; Generates dao &ndash;&gt;-->
+<!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.helloxin.mapper.local"-->
+<!--                             targetProject="src/main/java">-->
+<!--            <property name="enableSubPackages" value="true"/>-->
+<!--        </javaClientGenerator>-->
+
+<!--        <table tableName="ppk" domainObjectName="Ppk"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--        </table>-->
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://10.20.12.66:3306/test?useSSL=false" userId="root"
+                        password="yitu1234">
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+
+
+        <javaModelGenerator targetPackage="com.helloxin.model.alocal" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- Generates xml -->
+        <sqlMapGenerator targetPackage="alocal" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- Generates dao -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.helloxin.mapper.alocal"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="kkt" domainObjectName="Kkt"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+
+    </context>
+</generatorConfiguration>

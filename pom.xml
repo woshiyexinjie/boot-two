@@ -62,5 +62,6 @@
 		<module>spring-batch</module>
 		<module>resttemplate-gateway</module>
 		<module>shiro-springmvc</module>
-	</modules>
+        <module>boot-transaction</module>
+    </modules>
 </project>
