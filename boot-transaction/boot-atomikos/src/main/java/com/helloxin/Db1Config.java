@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
@@ -20,6 +21,7 @@ public class Db1Config {
     @Qualifier("db1")
     private DataSource dataSourceDb1;
 
+    @Primary
     @Bean
     public SqlSessionFactory sqlSessionFactoryDb1() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
@@ -28,6 +30,7 @@ public class Db1Config {
         return factoryBean.getObject();
     }
 
+    @Primary
     @Bean
     public SqlSessionTemplate sqlSessionTemplateDb1() throws Exception {
         return new SqlSessionTemplate(sqlSessionFactoryDb1());

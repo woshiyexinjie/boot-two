@@ -4,6 +4,7 @@ import com.helloxin.mapper.alocal.KktMapper;
 import com.helloxin.mapper.local.PpkMapper;
 import com.helloxin.model.alocal.KktDO;
 import com.helloxin.model.local.PpkDO;
+import com.helloxin.service.TranService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,9 @@ public class TestController {
     @Autowired
     private KktMapper kktMapper;
 
+    @Autowired
+    private TranService tranService;
+
     @RequestMapping(value = "test", method = RequestMethod.POST)
     public Integer setInvalidData() {
         log.info("test");
@@ -28,6 +32,12 @@ public class TestController {
         KktDO kktDO = kktMapper.selectByPrimaryKey(1);
         log.info(kktDO.getTest());
         return 200;
+    }
 
+    @RequestMapping(value = "testAdd", method = RequestMethod.POST)
+    public Integer testAdd() {
+        log.info("testAdd");
+        tranService.addTest();
+        return 200;
     }
 }
