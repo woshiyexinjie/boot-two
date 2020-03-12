@@ -33,7 +33,7 @@ public class TranServiceImpl implements TranService {
         KktDO kktDO = new KktDO();
         kktDO.setTest("test2");
         kktMapper.insert(kktDO);
-        throw  new RuntimeException("I am a Monster");
+//        throw  new RuntimeException("I am a Monster");
     }
 
 }

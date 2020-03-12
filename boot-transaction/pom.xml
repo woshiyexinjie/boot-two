@@ -10,6 +10,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <modules>
     <module>boot-atomikos</module>
+    <module>boot-bitronix</module>
   </modules>
 
   <name>boot-transaction</name>
