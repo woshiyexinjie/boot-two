@@ -63,5 +63,6 @@
 		<module>resttemplate-gateway</module>
 		<module>shiro-springmvc</module>
         <module>boot-transaction</module>
-    </modules>
+		<module>excel</module>
+	</modules>
 </project>
