@@ -12,6 +12,7 @@
     <module>jxls</module>
     <module>easyexcel</module>
     <module>jxl</module>
+    <module>poi</module>
   </modules>
 
   <name>excel</name>

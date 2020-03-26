@@ -35,9 +35,9 @@ public class DynamicHeadWriteTest
         List<String> head2 = new ArrayList<String>();
         head2.add("日期" + System.currentTimeMillis());
         List<String> head3 = new ArrayList<String>();
-        head3.add("字符串2" + System.currentTimeMillis());
+        head3.add("2字符串" + System.currentTimeMillis());
         List<String> head4 = new ArrayList<String>();
-        head4.add("字符串3" + System.currentTimeMillis());
+        head4.add("3字符串" + System.currentTimeMillis());
         list.add(head0);
         list.add(head1);
         list.add(head2);
@@ -52,8 +52,8 @@ public class DynamicHeadWriteTest
             List<Object> alist = new ArrayList<>();
             alist.add("字符串" + i);
             alist.add(new Date());
-            alist.add(0.56);
-            alist.add("2字符串" + i);
+            alist.add(null);
+            alist.add(null);
             alist.add("3字符串" + i);
             list.add(alist);
         }
