@@ -64,5 +64,6 @@
 		<module>shiro-springmvc</module>
         <module>boot-transaction</module>
 		<module>excel</module>
-	</modules>
+        <module>schedule</module>
+    </modules>
 </project>
