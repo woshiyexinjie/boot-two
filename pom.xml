@@ -65,5 +65,6 @@
         <module>boot-transaction</module>
 		<module>excel</module>
         <module>schedule</module>
+        <module>docker</module>
     </modules>
 </project>

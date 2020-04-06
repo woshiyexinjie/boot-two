@@ -1,4 +1,4 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-ADD sb-docker-0.0.1-SNAPSHOT.jar app.jar
+ADD base-docker-0.0.1.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
