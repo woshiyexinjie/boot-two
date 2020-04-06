@@ -1,0 +1,6 @@
+version: '2'
+services:
+        simpleservice:
+                image:  base-docker-0.01:v1
+                ports:
+                        - "8080:8080"
