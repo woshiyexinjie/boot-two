@@ -67,5 +67,6 @@
         <module>schedule</module>
         <module>docker</module>
         <module>message-converter</module>
+        <module>swagger</module>
     </modules>
 </project>
