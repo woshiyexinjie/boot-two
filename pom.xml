@@ -66,5 +66,6 @@
 		<module>excel</module>
         <module>schedule</module>
         <module>docker</module>
+        <module>message-converter</module>
     </modules>
 </project>
