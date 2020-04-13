@@ -67,5 +67,6 @@
         <module>docker</module>
         <module>message-converter</module>
         <module>swagger</module>
+        <module>storage</module>
     </modules>
 </project>
