@@ -56,7 +56,6 @@
 		<module>dubbo-provider</module>
 		<module>dubbo-consumer</module>
 		<module>grpc-feel</module>
-		<module>boot-docker</module>
 		<module>kudu-xin</module>
 		<module>spring-security</module>
 		<module>spring-batch</module>
