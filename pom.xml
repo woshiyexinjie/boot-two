@@ -57,7 +57,6 @@
 		<module>dubbo-consumer</module>
 		<module>grpc-feel</module>
 		<module>kudu-xin</module>
-		<module>spring-security</module>
 		<module>spring-batch</module>
 		<module>resttemplate-gateway</module>
 		<module>shiro-springmvc</module>
