@@ -1,4 +1,4 @@
-package com.helloxin.spring.security;
+package com.helloxin;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

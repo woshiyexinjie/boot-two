@@ -68,5 +68,6 @@
         <module>message-converter</module>
         <module>swagger</module>
         <module>storage</module>
+        <module>auth</module>
     </modules>
 </project>

@@ -1,4 +1,4 @@
-package com.helloxin.spring.security;
+package com.helloxin;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
