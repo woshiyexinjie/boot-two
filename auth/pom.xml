@@ -10,6 +10,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <modules>
     <module>simple-spring-security</module>
+      <module>casbin</module>
   </modules>
 
   <name>auth</name>
