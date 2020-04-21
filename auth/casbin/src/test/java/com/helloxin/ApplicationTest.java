@@ -24,7 +24,7 @@ public class ApplicationTest {
     public void testTrancferFicusAnnoToKakapo() throws Exception {
 
 
-
+        //这样写起来太麻烦 还是严总提供的好用
         System.out.println(execCmd("pwd",null));
 //        ClassPathResource classPathResource = new ClassPathResource("casbincfg/basic_model.conf");
 //        InputStream inputStream =classPathResource.getInputStream();
