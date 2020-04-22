@@ -1,6 +1,5 @@
 package com.helloxin.job;
 
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -16,8 +15,8 @@ public class MyJob {
 //        System.out.println(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + " >>fixedDelay执行结束....");
 //    }
 
-    @Scheduled(fixedDelay = 100,initialDelay = 3000)
-    @Async("detectTaskScheduler")
+    @Scheduled(fixedDelay = 10,initialDelay = 3000)
+//    @Async("detectTaskScheduler")
     public void asyncfixedDelayJob() throws InterruptedException {
         System.out.println(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()) + " >>fixedDelay执行....");
         Thread.sleep(5000L);
