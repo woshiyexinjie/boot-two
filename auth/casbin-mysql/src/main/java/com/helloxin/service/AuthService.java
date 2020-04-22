@@ -7,6 +7,8 @@ import org.casbin.jcasbin.main.Enforcer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 import static com.helloxin.common.PolicyType.GRANT;
 import static com.helloxin.common.PolicyType.USER_BIND_GROUP;
 import static com.helloxin.common.PolicyType.RESOURCE_BIND_GROUP;
@@ -28,4 +30,10 @@ public class AuthService {
     public void addPolicyGResouceBind(BindGroup bndGroup) {
         enforcer.addNamedGroupingPolicy(RESOURCE_BIND_GROUP.type,bndGroup.getSubject(), bndGroup.getGroup());
     }
+
+    //获取用户的权限
+    public List<List<String>> getImplicitPermissionsForUser(String user) {
+        return enforcer.getImplicitPermissionsForUser(user);
+    }
+
 }
