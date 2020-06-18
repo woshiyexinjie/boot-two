@@ -68,5 +68,7 @@
         <module>swagger</module>
         <module>storage</module>
         <module>auth</module>
-    </modules>
+        <module>monitor</module>
+		<module>rpc</module>
+	</modules>
 </project>
