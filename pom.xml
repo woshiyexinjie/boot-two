@@ -70,5 +70,6 @@
         <module>auth</module>
         <module>monitor</module>
 		<module>rpc</module>
-	</modules>
+        <module>orm</module>
+    </modules>
 </project>
