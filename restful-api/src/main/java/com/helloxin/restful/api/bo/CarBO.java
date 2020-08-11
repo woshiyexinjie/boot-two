@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CarBO {
     private String make;
-    private int seatCount;
+    private int numberOfSeats;
 }
