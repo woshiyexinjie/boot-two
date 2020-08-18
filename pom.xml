@@ -71,5 +71,6 @@
         <module>monitor</module>
 		<module>rpc</module>
         <module>orm</module>
+        <module>graphql</module>
     </modules>
 </project>
