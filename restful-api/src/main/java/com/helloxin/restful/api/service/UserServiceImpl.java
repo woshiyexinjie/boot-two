@@ -12,6 +12,6 @@ public class UserServiceImpl implements UserService{
     @Override
     public UserBO getUserByUserId(String userId){
           log.info("userId ={}",userId);
-          return UserBO.builder().userId(userId).userName("zhangsan").userPhone("17200102300").createTime(new Date()).updateTime(new Date()).build();
+          return UserBO.builder().userId(userId).userName("zhangsan_real").userPhone("17200102400").createTime(new Date()).updateTime(new Date()).build();
     }
 }
