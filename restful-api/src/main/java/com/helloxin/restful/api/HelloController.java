@@ -29,7 +29,7 @@ public class HelloController {
 
     @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
     public Boolean uploadFile(@RequestParam("file") MultipartFile file) {
-        log.info("file size={}",file.getSize());
+        log.info("file size={}", file.getSize());
         return Boolean.TRUE;
     }
 
