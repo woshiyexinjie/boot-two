@@ -72,5 +72,6 @@
 		<module>rpc</module>
         <module>orm</module>
         <module>graphql</module>
+        <module>kafka</module>
     </modules>
 </project>
