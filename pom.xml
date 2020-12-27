@@ -73,5 +73,6 @@
         <module>orm</module>
         <module>graphql</module>
         <module>kafka</module>
+        <module>hbase</module>
     </modules>
 </project>

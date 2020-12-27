@@ -1,0 +1,6 @@
+spring:
+  data:
+    hbase:
+      quorum: 116.62.102.201:2181
+      rootDir: hdfs://116.62.102.201:9000/hbase
+      nodeParent: /hbase
