@@ -1,6 +1,13 @@
-spring:
-  data:
+hbase:
+  config:
+    hbase.zookeeper.quorum: ip
+    hbase.zookeeper.port: 2181
+    hbase.zookeeper.znode: /hbase
+    hbase.client.keyvalue.maxsize: 1572864000
     hbase:
-      quorum: 116.62.102.201:2181
-      rootDir: hdfs://116.62.102.201:9000/hbase
-      nodeParent: /hbase
+      client:
+        retries:
+          number: 3
+    zookeeper:
+      recovery:
+        retry: 3
